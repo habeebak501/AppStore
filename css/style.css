@@ -1,7 +1,20 @@
-
-    .btn-round {
-        border-radius: 17px;
-    }
+.btn-round{
+  border-radius: 25px;
+}
+.button {
+background-color: #4CAF50; /* Green */
+border: none;
+   border-radius: 25px;
+    color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+/*cursor: pointer;*/
+}
+.button5 {background-color: #555555;} /* Black */
 
     .alert-success-sm {
         border: 2px solid #a1a1a1;
@@ -52,8 +65,8 @@
       filter: alpha(opacity=0);
       width: 55%;
       height: 30%;
-      left: 10%;
-      top: 10%;
+      left: 20%;
+      top: 20%;
       border-radius: 80%;
       border: 2px solid #FFF;
       -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -113,4 +126,36 @@
       -webkit-transform: translate3d(0,0,0);
       transform: translate3d(0,0,0);
     }
+    .play {
+    background: url('http://cdn1.iconfinder.com/data/icons/iconslandplayer/PNG/64x64/CircleBlue/Play1Pressed.png') center center no-repeat;
+    margin: -240px 10px 0 0;
+    height: 140px;
+    position: relative;
+    z-index: 10;
+}
+.image {
+    z-index: 9;
+    text-align: center;
+    border: 1px solid blue;
+}
+.icon {
+  background-image :url('Button_29_play_icon_white-min.png');
+  background-repeat : no-repeat;
 
+}
+.videoIcon {
+    top:165px; right:2px;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+.videoIcon {
+    font-size: .96em;
+}
+.videoIcon.playS {
+    /*background-position: 0 -2495px;*/
+    background-image :url('Button_29_play_icon_white-min.png');
+}

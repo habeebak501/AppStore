@@ -9,8 +9,12 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
+    <script src="http://cdn-na.infragistics.com/igniteui/2016.1/latest/js/infragistics.core.js"></script>
+    <script src="http://cdn-na.infragistics.com/igniteui/2016.1/latest/js/infragistics.lob.js"></script>
+    <script src="http://cdn-na.infragistics.com/igniteui/2016.1/latest/js/extensions/igniteui-angular.js"></script>
     <link rel="stylesheet" href="bower_components/angular-carousel-3d/dist/carousel-3d.css">
     <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/videoPlayer.css">
 
     <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script> -->
     <script src="bower_components/angular-carousel-3d/dist/carousel-3d.js"></script>
@@ -37,12 +41,12 @@
                 </li>
             </ul>
         </div>
-        
+
     </nav>
     <div>
     </div>
     <br>
-            <ui-view></ui-view>
+    <ui-view></ui-view>
 </body>
 <script src="app.js"></script>
 <script src="controllers/categoryController.js"></script>
@@ -50,6 +54,7 @@
 <script src="services/categoryService.js"></script>
 <script src="controllers/simplePagination.js"></script>
 <script src="controllers/carousel-3d.js"></script>
+<script src="controllers/videoController.js"></script>
 <!-- <script src="services/contentService.js"></script> -->
 
 </html>

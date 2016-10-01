@@ -1,17 +1,33 @@
 var app = angular.module("myApp")
-    .controller("contentController", function($scope, $stateParams, $http, Pagination, categoryService) {
-        //  $scope.load=true;
-        console.log('contentController');
+    .controller("videoController", function($scope, $stateParams, $http, $sce, Pagination) {
+        // $scope.load=true;
+        console.log('videoController');
         $scope.pagination = Pagination.getNew(3);
+        var url = $stateParams.url;
+        // var poster = $stateParams.poster;
         var pcatid = $stateParams.pid;
         var catid = $stateParams.cid;
+        url = $sce.trustAsResourceUrl(url);
+        $scope.url = url;
+        console.log("hi");
+        console.log(url);
+        $scope.changeVideo = function(url, poster) {
+          console.log(url,poster);
+            url = $sce.trustAsResourceUrl(url);
+            var video = document.getElementById("myVideo")
+            isSupp = video.canPlayType("video/mp4");
+            if (isSupp == "") {
+                video.src = "video4.ogg";
+            } else {
+                video.src = url;
+                 video.poster = poster;
+            }
+        }
+        // $scope.poster = poster;
         $scope.pcatid = pcatid;
         $scope.catid = catid;
         console.log(pcatid, catid);
-        var url = $stateParams.url;
         var url = 'http://beta.appystore.in/appy_app/appyApi_handler.php?method=getContentList&content_type=videos&limit=133&offset=0&catid=' + catid + '&pcatid=' + pcatid + '&age=1.5&incl_age=5';
-        $scope.url = url;
-        console.log(url);
         $http.get(url, {
                 headers: {
                     'Access-Control-Allow-Origin': 'true',
@@ -33,8 +49,16 @@ var app = angular.module("myApp")
             })
             .then(function(response) {
                 // $scope.load=false;
+                // console.log("reponse",response);
+                //          $scope.arr=[];
+                //   var result = response.data.Responsedetails.data_arrays;
+                //        for(i in result){
+                //      $scope.arr.push(result[i].dnld_url);
+                // }
+                //       console.log($scope.arr);
                 $scope.result = response.data.Responsedetails.data_array;
-                console.log($scope.result);
                 $scope.pagination.numPages = Math.ceil($scope.result.length / $scope.pagination.perPage);
+                console.log($scope.result);
+
             });
     });

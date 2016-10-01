@@ -9,8 +9,13 @@ angular.module('myApp', ['ui.router','angular-carousel-3d','simplePagination'])
                 controller: 'mainController'
             })
             .state('content',{
-              url:'/?pid?cid',
+              url:'/content/?pid?cid',
               templateUrl:'templates/content.html',
               controller:'contentController'
+            })
+            .state('video',{
+              url:'/video/?url?pid?cid',
+              templateUrl:'templates/video.html',
+              controller:'videoController'
             })
           });
