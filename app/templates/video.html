@@ -1,0 +1,41 @@
+<!--
+*@FileName:video.html
+*@Created By:Habeeb
+*@Date:
+*@Purpose:To display the videos
+  -->
+<center>
+    <div id="container">
+        <video id="myVideo" width="480" height="270" preload="auto" poster="loading.gif" controls autoplay>
+            <source src="{{url}}" type="video/mp4"></source>
+            <source src="video4.ogg" type="video/ogg"></source>
+            <source src="video4.webm" type="video/webm"></source>
+        </video>
+</center>
+<br>
+<div class="container">
+    <!--ng-click is used to change the videos  -->
+    <div ng-click="changeVideo(x.dnld_url)" ng-repeat="x in result| startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage" class="col-sm-4">
+        <div class="thumbnail">
+            <a>
+                <img class="img-responsive" src='{{x.image_path}}' alt="">
+                <div class="img-responsive">
+                <span class="icon videoIcon playS"></span>
+              </div>
+                <center>
+                    <p><span style="color:black;font-weight:bold">{{x.title}}</span></p>
+                </center>
+            </a>
+        </div>
+    </div>
+  </div>
+    <!-- btn pull-left & right used to insert buttons left side & right side -->
+    <div class="btn pull-left">
+        <!--pagination.prevpage method is used to go previous page  -->
+        <button class="button button5" ng-click="pagination.prevPage()" ng-hide="pagination.page == 0" ng-click="pagination.prevPage()">Previous</button>
+    </div>
+    <div class="btn pull-right">
+        <!-- pagination.nextpage method is used to go next page -->
+        <button class="button button5" ng-click="pagination.nextPage()" ng-hide="pagination.page + 1 >= pagination.numPages" ng-click="pagination.nextPage()">Next</button>
+    </div>
+</div>

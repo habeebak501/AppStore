@@ -1,0 +1,20 @@
+{
+  "name": "appstore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "firebase": "^3.3.2",
+    "bootstrap": "^3.3.7",
+    "angular-sanitize": "^1.5.8",
+    "angular-swipe": "^0.4.0",
+    "angularfire": "^2.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
