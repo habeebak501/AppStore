@@ -4,8 +4,7 @@
 var express=require('express')
 ,app=express()
 ,cors=require('cors')
-,http=require('http').Server(app)
-,port=process.env.PORT||8888
+,port=process.env.PORT||4001
 ,bodyParser=require('body-parser')
 /**
  * middleware
@@ -19,6 +18,6 @@ var express=require('express')
 /**
  * local port to start the app
  * */
-http.listen(port,function(){
+app.listen(port,function(){
   console.log('server started at'+port);
 });
