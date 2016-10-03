@@ -2,7 +2,7 @@
 *@FileName:categoryController.js
 *@Created By:Habeeb
 *@Date:
-*@Purpose:To display the categoryImages 
+*@Purpose:To display the categoryImages
   */
 var app = angular.module("myApp")
     .controller("mainController", function($scope, categoryService) {
@@ -23,7 +23,7 @@ var app = angular.module("myApp")
             height: 260,
             top: 200,
             space: 220,
-            autoRotationSpeed: 5000,
+            autoRotationSpeed: 2000,
             loop: true
         };
         var promise = categoryService.result();
