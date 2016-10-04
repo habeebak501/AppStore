@@ -5,10 +5,13 @@
 *@Purpose:To display the ContentImages based on pcatid and catid
 */
 var app = angular.module("myApp")
-    .controller("contentController", function($scope, $stateParams, $http, Pagination, categoryService) {
+    .controller("contentController", function($scope, $stateParams, $http, Pagination, categoryService,$window) {
         //  $scope.load=true;
         console.log('contentController');
-        $scope.pagination = Pagination.getNew(3);
+         $scope.myGoBack = function() {
+          $window.History.goBack();
+          };
+        $scope.pagination = Pagination.getNew(4);
         var pcatid = $stateParams.pid;
         var catid = $stateParams.cid;
         $scope.pcatid = pcatid;

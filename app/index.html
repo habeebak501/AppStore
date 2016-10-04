@@ -8,11 +8,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>AppyStore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="bower_components/angular/angular.js"></script>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
     <script src="http://cdn-na.infragistics.com/igniteui/2016.1/latest/js/infragistics.core.js"></script>
@@ -21,33 +22,26 @@
     <link rel="stylesheet" href="bower_components/angular-carousel-3d/dist/carousel-3d.css">
     <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/videoPlayer.css">
+      <!-- <script type="text/javascript" src="bower_components/bootstrap/css/bootstrap.min.css"></script>
+      <script type="text/javascript" src="bower_components/bootstrap/css/bootstrap.css"></script> -->
 
     <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script> -->
     <script src="bower_components/angular-carousel-3d/dist/carousel-3d.js"></script>
     <script src="bower_components/angular-swipe/dist/angular-swipe.js"></script>
+
 </head>
 
 <body ng-app='myApp' background="BG-min.png">
   <!-- navigation bar -->
     <nav>
         <div class="container">
-            <ul class="nav navbar-nav navbar-left">
-                    <a href="#"><img src="Button_7_menu_on-min.png"></img>
-                    </a>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                    <a href="#"><img src="Button_6_search_on-min.png"></img>
-                    </a>
-                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a href="#"><img src="Button_8_kart_on-min.png"></img>
-                    </a>
-            </ul>
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            <ul class="float-center">
-              <a href="#"><img src="Button_5_history_on-min.png"></img>
-              </a>
-            </ul>
+          <ul>
+   <img class = "float:left" src = 'Optimised_icons_all-sizes/drawable-xxxhdpi/Button_7_menu_on-min.png' height="50" width="50">
+   <img class = "float_center" src = 'Optimised_icons_all-sizes/drawable-xxxhdpi/Button_5_history_on-min.png' height="50" width="50">
+   <img style="float:right" src = 'Optimised_icons_all-sizes/drawable-xxxhdpi/Button_8_kart_on-min.png' height="50" width="50">
+   <img style="float:right" src = 'Optimised_icons_all-sizes/drawable-xxxhdpi/Button_6_search_on-min.png' height="50" width="50">
+ </ul>
+   <br>
         </div>
 
     </nav>

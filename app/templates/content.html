@@ -4,24 +4,46 @@
 *@Date:
 *@Purpose:To display the content images
   -->
-<div class="container">
-<div ng-repeat="x in result| startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage" class="col-sm-4">
-    <div class="hovereffect">
-        <div class="thumbnail">
-            <img src='{{x.image_path}}' alt="" poster="3.gif">
-            <!-- to display small video icon on image -->
-            <span class="icon videoIcon playS"></span>
-            <p></p>
-            <!-- overlay class is used to mouse move on image name will displayed -->
-            <div class="overlay">
-                <a ui-sref='video({url:x.dnld_url,poster:x.image_path,pid:pcatid,cid:catid})'>
-                    <h2><span style="color:white;font-weight:bold">{{x.title}}</span></h2>
+  <a onclick="history.back()">
+   <img src="Button_14_back-min.png"></img></a>
+  <div class  = "container">
+  <!-- <div ng-swipe-right="pagination.prevPage()" ng-swipe-left="pagination.nextPage()"> -->
+      <center>
+          <div class="col-md-3" style="display: inline-block " ng-repeat="x in result | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage" class='img-responsive'>
+            <a>  <div class="card card-1">
+                  <!-- <a ng-swipe-right="pagination.prevPage()" ng-swipe-left="pagination.nextPage()"> -->
+                      <img class="img" style='border-radius: 10%;' ng-src='{{x.image_path}}' width="250"height="150" ui-sref='video({url:x.dnld_url,poster:x.image_path,pid:pcatid,cid:catid})'/>
+                      <span class="icon videoIcon playS"></span>
+
+                  <p>{{x.title}}</p>
                 </a>
+                  <br>
+              </div>
+          </div>
+      </center>
+  </div>
+  </div>
+
+
+
+
+<!-- <div ng-repeat="x in result| startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage" class="col-sm-4">
+    <!<div class="hovereffect"> -->
+        <!-- <div class="thumbnail">
+              <a ui-sref='video({url:x.dnld_url,poster:x.image_path,pid:pcatid,cid:catid})'>
+              <img class="img" src='{{x.image_path}}' alt="">
+              <div class="img-responsive">
+              <span class="icon videoIcon playS"></span>
+            </div>
+              <center>
+                  <p><span style="color:black;font-weight:bold">{{x.title}}</span></p>
+              </center>
+          </a>
             </div>
         </div>
     </div>
 </div>
-</div>
+</div> -->
 <div class="btn pull-left">
     <button class="button" ng-click="pagination.prevPage()" ng-hide="pagination.page == 0" ng-click="pagination.prevPage()">Previous</button>
 </div>

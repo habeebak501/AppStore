@@ -1,7 +1,43 @@
-.img {
-    width: 50%;
-    height: auto;
+.card {
+  background: #fff;
+  border-radius: 12px;
+    border-color: #ff0000 #00ff00 #0000ff rgb(250,0,255);
+  display: inline-block;
+  height: 200px;
+  margin: 1rem;
+  position: relative;
+  width: 270px;
 }
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card-2 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.card-3 {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.card-4 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card-5 {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+/*#myModal {
+top:5%;
+right:50%;
+outline: none;
+}*/
 .float-center{
   float:right;
   position:relative;
@@ -52,120 +88,58 @@ margin: 4px 2px;
     .mynavbar {
         text-align: center;
     }*/
-
+     .img{
+        display: inline-block;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        transition: 0.3s;
+    }
     body {
         /*background-image: url("Optimised_icons_all-sizes/drawable-ldpi/BG-min.png");*/
         background-repeat: no-repeat;
         background-size: cover;
     }
-.hovereffect {
-      width: 100%;
-      height: 50%;
-      float: left;
-      overflow: hidden;
-      position: relative;
-      text-align: center;
-      cursor: default;
-    }
+    .horizontal { display: inline;}
+    .img-responsive{
+     -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+       background-size: cover;
+      }
+    .icon {
+      background-image :url('Button_29_play_icon_white-min.png');
+      background-repeat : no-repeat;
 
-    .hovereffect .overlay {
-      position: absolute;
-      overflow: hidden;
-      opacity: 0;
-      filter: alpha(opacity=0);
-      width: 55%;
-      height: 30%;
-      left: 20%;
-      top: 20%;
-      border-radius: 80%;
-      border: 2px solid #FFF;
-      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-      transition: opacity 0.35s, transform 0.35s;
-      -webkit-transform: translate3d(50%,50%,0);
-      transform: translate3d(50%,50%,0);
     }
-
-    .hovereffect:hover .overlay {
-      background-color: rgba(0,0,255,0.3);
+    .videoIcon {
+        top:101px; left:5px;
+        height: 48px;
+        width: 88px;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
     }
-
-    .hovereffect img {
-      display: block;
-      position: relative;
-      -webkit-transition: all 0.35s;
-      transition: all 0.35s;
+    .videoIcon {
+        font-size: .95em;
     }
-
-    .hovereffect:hover img {
-      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1.4" /><feFuncG type="linear" slope="1.4" /><feFuncB type="linear" slope="1.4" /></feComponentTransfer></filter></svg>#filter');
-      filter: brightness(1.4);
-      -webkit-filter: brightness(1.4);
+    .videoIcon.playS {
+        /*background-position: 0 -2495px;*/
     }
-
-    .hovereffect h2 {
-      text-transform: uppercase;
-      text-align: center;
-      position: relative;
-      font-size: 17px;
-      padding: 10px;
-      background-color: transparent;
-      color: #FFF;
-      padding: 1em 0;
-      opacity: 0;
-      filter: alpha(opacity=0);
-      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-      transition: opacity 0.35s, transform 0.35s;
-      -webkit-transform: translate3d(-150%,-400%,0);
-      transform: translate3d(-150%,-400%,0);
-    }
-
-    .hovereffect a, .hovereffect p {
-      color: #FFF;
-      padding: 1em 0;
-      opacity: 0;
-      filter: alpha(opacity=0);
-      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-      transition: opacity 0.35s, transform 0.35s;
-      -webkit-transform: translate3d(-150%,-400%,0);
-      transform: translate3d(-150%,-400%,0);
-    }
-
-    .hovereffect:hover a, .hovereffect:hover p, .hovereffect:hover h2, .hovereffect:hover .overlay {
-      opacity: 1;
-      filter: alpha(opacity=100);
-      -webkit-transform: translate3d(0,0,0);
-      transform: translate3d(0,0,0);
-    }
-    .play {
-    background: url('http://cdn1.iconfinder.com/data/icons/iconslandplayer/PNG/64x64/CircleBlue/Play1Pressed.png') center center no-repeat;
-    margin: -240px 10px 0 0;
-    height: 140px;
-    position: relative;
-    z-index: 10;
+    .moreIcon{
+      background-image : url('Button_27_more-min.png')
+ height: 48px;
+ width: 88px;
+ display: inline-block;
+ position: absolute;
+ left: 0;
+ bottom: 0;
 }
-.image {
-    z-index: 9;
-    text-align: center;
-    border: 1px solid blue;
-}
-.icon {
-  background-image :url('Button_29_play_icon_white-min.png');
-  background-repeat : no-repeat;
-
-}
-.videoIcon {
-    top:101px; left:5px;
-    height: 50px;
-    width: 50px;
-    display: inline-block;
-    position: absolute;
-    left: 20px;
-    bottom: 10px;
-}
-.videoIcon {
-    font-size: .96em;
-}
-.videoIcon.playS {
-    /*background-position: 0 -2495px;*/
-    background-image :url('Button_29_play_icon_white-min.png');
-}
+/*.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}*/

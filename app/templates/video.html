@@ -4,18 +4,45 @@
 *@Date:
 *@Purpose:To display the videos
   -->
+  <a onclick="history.back()">
+   <img src="Button_14_back-min.png"></img></a>
 <center>
-    <div id="container">
+  <!-- <div class="video-container"> -->
+      <div id="container">
         <video id="myVideo" width="480" height="270" preload="auto" poster="loading.gif" controls autoplay>
             <source src="{{url}}" type="video/mp4"></source>
             <source src="video4.ogg" type="video/ogg"></source>
             <source src="video4.webm" type="video/webm"></source>
         </video>
+      </div>
 </center>
 <br>
-<div class="container">
+
+<center>
+<div class = "container">
+<!-- <div ng-swipe-right="pagination.prevPage()" ng-swipe-left="pagination.nextPage()"> -->
+
+        <div class="col-md-4" ng-click="changeVideo(x.dnld_url)" style="display: inline-block " ng-repeat="x in result | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage" class='img-responsive'>
+          <a>  <div class="card card-1">
+                <!-- <a ng-swipe-right="pagination.prevPage()" ng-swipe-left="pagination.nextPage()"> -->
+                    <img class="img" style='border-radius: 10%;' ng-src='{{x.image_path}}' width="250"height="150" ui-sref='video({url:x.dnld_url,poster:x.image_path,pid:pcatid,cid:catid})'/>
+                    <span class="icon videoIcon playS"></span>
+
+                <p>{{x.title}}</p>
+              </a>
+                <br>
+            </div>
+        </div>
+
+</div>
+</center>
+
+
+
+
+<!-- <div class="container">
     <!--ng-click is used to change the videos  -->
-    <div ng-click="changeVideo(x.dnld_url)" ng-repeat="x in result| startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage" class="col-sm-4">
+    <!-- <div ng-click="changeVideo(x.dnld_url)" ng-repeat="x in result| startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage" class="col-sm-4">
         <div class="thumbnail">
             <a>
                 <img class="img-responsive" src='{{x.image_path}}' alt="">
@@ -28,7 +55,7 @@
             </a>
         </div>
     </div>
-  </div>
+  </div> -->
     <!-- btn pull-left & right used to insert buttons left side & right side -->
     <div class="btn pull-left">
         <!--pagination.prevpage method is used to go previous page  -->
