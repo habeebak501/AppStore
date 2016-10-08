@@ -15,12 +15,12 @@ angular.module('myApp', ['ui.router','angular-carousel-3d','simplePagination'])
                 controller: 'mainController'
             })
             .state('content',{
-              url:'/content/?pid?cid',
+              url:'/content/?pid?cid?content_count',
               templateUrl:'templates/content.html',
               controller:'contentController'
             })
             .state('video',{
-              url:'/video/?url?pid?cid',
+              url:'/video/?url?pid?cid?content_count',
               templateUrl:'templates/video.html',
               controller:'videoController'
             })

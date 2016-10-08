@@ -5,10 +5,13 @@
 *@Purpose:To display the videos based on content images
 */
 var app = angular.module("myApp")
-    .controller("videoController", function($scope, $stateParams, $http, $sce, Pagination) {
+    .controller("videoController", function($scope, $stateParams, $http, $sce, Pagination,categoryService) {
         // $scope.load=true;
         console.log('videoController');
-        $scope.pagination = Pagination.getNew(3);
+        $scope.content_count = $stateParams.content_count;
+        console.log($scope.content_count);
+        var count = $scope.content_count;
+        $scope.pagination = Pagination.getNew(count);
         var url = $stateParams.url;
         // var poster = $stateParams.poster;
         var pcatid = $stateParams.pid;
@@ -33,7 +36,7 @@ var app = angular.module("myApp")
         $scope.pcatid = pcatid;
         $scope.catid = catid;
         console.log(pcatid, catid);
-        var url = 'http://beta.appystore.in/appy_app/appyApi_handler.php?method=getContentList&content_type=videos&limit=133&offset=0&catid=' + catid + '&pcatid=' + pcatid + '&age=1.5&incl_age=5';
+        var url = 'http://beta.appystore.in/appy_app/appyApi_handler.php?method=getContentList&content_type=videos&limit=' + count + '&offset=0&catid=' + catid + '&pcatid=' + pcatid + '&age=1.5&incl_age=5';
         $http.get(url, {
                 headers: {
                     'Access-Control-Allow-Origin': 'true',

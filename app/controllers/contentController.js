@@ -5,20 +5,23 @@
 *@Purpose:To display the ContentImages based on pcatid and catid
 */
 var app = angular.module("myApp")
-    .controller("contentController", function($scope, $stateParams, $http, Pagination, categoryService,$window) {
+    .controller("contentController", function($scope, $stateParams, $http, Pagination, categoryService) {
         //  $scope.load=true;
         console.log('contentController');
-         $scope.myGoBack = function() {
-          $window.History.goBack();
-          };
-        $scope.pagination = Pagination.getNew(4);
+        $scope.content_count = $stateParams.content_count;
+        console.log($scope.content_count);
+        var count = $scope.content_count;
+        $scope.content_count=count;
+        // $scope.count=$stateParams.content_count;
+        // console.log($scope.count);
+         $scope.pagination = Pagination.getNew(count);
         var pcatid = $stateParams.pid;
         var catid = $stateParams.cid;
         $scope.pcatid = pcatid;
         $scope.catid = catid;
         console.log(pcatid, catid);
         var url = $stateParams.url;
-        var url = 'http://beta.appystore.in/appy_app/appyApi_handler.php?method=getContentList&content_type=videos&limit=133&offset=0&catid=' + catid + '&pcatid=' + pcatid + '&age=1.5&incl_age=5';
+        var url = 'http://beta.appystore.in/appy_app/appyApi_handler.php?method=getContentList&content_type=videos&limit=' + count + '&offset=0&catid=' + catid + '&pcatid=' + pcatid + '&age=1.5&incl_age=5';
         $scope.url = url;
         console.log(url);
         $http.get(url, {

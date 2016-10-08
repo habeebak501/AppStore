@@ -14,5 +14,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "video.js": "videojs#^5.12.2"
+  }
 }
